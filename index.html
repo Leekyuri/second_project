@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KAKAO</title>
+	<style>
+		* {margin:0; padding:0;}
+
+		.Gold {height: 200px;
+				width: 600px;
+				position: absolute;
+				top:380px;
+				left:175px;}
+
+		.Gold img {width:1000px;}
+
+		.R {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 62px;
+			left:390px;}
+
+		.R img {width:110px;}
+
+		.M {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 65px;
+			left:495px;}
+
+		.M img {width: 80px;}
+
+		.P {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 62px;
+			left:570px;}
+
+		.P img {width: 90px;}
+
+		.T {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 62px;
+			left:650px;}
+
+		.T img {width: 90px;}
+
+		.A {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 62px;
+			left:730px;}
+
+		.A img {width: 90px;}
+
+		.N {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 62px;
+			left:810px;}
+
+		.N img {width: 90px;}
+
+		.C {height: 25px;
+			width: 25px;
+			position: absolute;
+			top: 85px;
+			left:900px;}
+
+		.C img {width: 52px;}
+
+		#gi {width:300px; position: absolute; left:50%; top:50%;
+			transform: translateX(-50%) translateY(-50%) }
+		
+		#musicplayer {width: 45px; position: absolute; left: 50%; top: 498px;
+						transform: translateX(-50%) translateY(-50%)}
+	</style>
+</head>
+<body>
+	<div style="height: 100%; width: 100%">
+		<div style="height : 550px; 
+					width: 100%;
+					background: #F4D922; 
+					position: relative;">	
+		</div>
+		<div style="height : 200px;
+					width: 100%;
+					background: #4E3819;">
+		</div>
+		<div class="Gold">
+			<img src="gold.png"/>
+		</div>
+		<div class="R" id="one" onclick="a()">
+			<img src="ryan.png"/>
+		</div>
+		<div class="M" id="two" onclick="b()">
+			<img src="muzi.png"/>
+		</div>
+		<div class="P" id="three" onclick="c()">
+			<img src="prodo.png"/>
+		</div>
+		<div class="T" id="four" onclick="d()">
+			<img src="tube.png"/>
+		</div>
+		<div class="A" id="five" onclick="e()">
+			<img src="apeach.png"/>
+		</div>
+		<div class="N" id="six" onclick="f()">
+			<img src="neo.png"/>
+		</div>
+		<div class="C" id="seven" onclick="g()">
+			<img src="con2.png"/>
+		</div>
+	</div>
+
+	<img src="playB.png" id="musicplayer">
+
+	<img id="gi" src=""/>
+	
+	<audio id=backMusic>
+ 		<source src="music.mp3" type="audio/mpeg">
+	</audio>
+
+
+
+
+	<script type="text/javascript">
+		function a(){
+			document.getElementById("gi").setAttribute("src","1.gif");	
+		};
+
+		function b(){
+			document.getElementById("gi").setAttribute("src","2.gif");
+		};
+		function c(){
+			document.getElementById("gi").setAttribute("src","3.gif");
+		};
+		function d(){
+			document.getElementById("gi").setAttribute("src","4.gif");
+		};	
+		function e(){
+			document.getElementById("gi").setAttribute("src","5.gif");
+		};
+		function f(){
+			document.getElementById("gi").setAttribute("src","6.gif");
+		};
+		function g(){
+			document.getElementById("gi").setAttribute("src","7.gif");
+		};
+
+		var toggle = "off";
+
+		musicplayer.onclick = function(){
+				if(toggle == "off"){
+					musicplayer.setAttribute("src","pauseB.png")
+					backMusic.play();
+					toggle = "on";
+				}else {
+					musicplayer.setAttribute("src","playB.png")
+					backMusic.pause();
+					toggle = "off";
+				}
+		}
+
+	</script>
+</body>
+</html>
